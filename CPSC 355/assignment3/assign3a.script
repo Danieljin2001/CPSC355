@@ -1,0 +1,172 @@
+Script started on 2020-05-31 16:35:24-06:00
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ ./assign3a
+Enter in an integer: 10
+Result is: 10
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ ./assign3a
+Enter in an integer: -9
+Result is: -9
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ ./assign3a
+Enter in an integer: 12345
+Result is: 12345
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ ./assign3a
+Enter in an integer: -12345
+Result is: -12345
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ gdb assign3a
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign3a...done.
+(gdb) b main
+Breakpoint 1 at 0x4005e4: file assign3a.s, line 23.
+(gdb) r
+Starting program: /home/ugb/daniel.jin/355/assignment3/assign3a 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Breakpoint 1, main () at assign3a.s:23
+23	main:           stp     x29, x30, [sp, -16]!
+(gdb) ni
+24	                mov     x29, sp
+(gdb) 
+27	                mov     x21, 1         	//this is used to output a negative or positive number (x21 will be either 1 or -1) in the end
+(gdb) 
+28	                mov     x22, 0        	  	//this is used to be "x22" and will go up in increments of one and will be used for 2^x22
+(gdb) 
+29	                mov     x23, 0		//this is the returned value
+(gdb) 
+30	                mov     x24, 1		//base of 2 and exponent increments by 1
+(gdb) 
+32	                adrp    x0, prompt1
+(gdb) 
+33	                add     x0, x0, :lo12:prompt1
+(gdb) 
+34	                bl      printf                  //calling printf function from C
+(gdb) 
+37	                adrp    x0, formatIn
+(gdb) 
+38	                add     x0, x0, :lo12:formatIn
+(gdb) 
+39	                adr     x1, n                   //saving n into x1
+(gdb) 
+40	                bl      scanf                   //calling scanf function from C
+(gdb) 
+Enter in an integer: 3
+43	                adr     x1, n                   //saving n into x1
+(gdb) display [K/t x[K$x23
+1: /t $x23 = 0
+(gdb) display $x19
+2: $x19 = 4195984
+(gdb) ni
+44	                ldr     x19, [x1]             //loading address of x1 to x19
+1: /t $x23 = 0
+2: $x19 = 4195984
+(gdb) 
+46	                lsr     x20, x19, 63         //this logically shifts right 63 times, leaving 1 or 0 at least significant digit (to check if negative or not)
+1: /t $x23 = 0
+2: $x19 = 3
+(gdb) si
+47	                tst     x20, 0x1               //this checks if the least significant digit of x20 is 1 or 0.
+1: /t $x23 = 0
+2: $x19 = 3
+(gdb) 
+48	                b.eq    positive                //if x20 is 0 go to positive (because Z == 1)
+1: /t $x23 = 0
+2: $x19 = 3
+(gdb) 
+positive () at assign3a.s:56
+56	positive:       cmp     x22, 64                 	//comparing "x22" and 64 (64 bits)
+1: /t $x23 = 0
+2: $x19 = 3
+(gdb) 
+57	                b.eq    done                    //once "x22" reaches 64 it branches to done
+1: /t $x23 = 0
+2: $x19 = 3
+(gdb) 
+59	                tst     x19, 0x1               //this checks if lsb of x19 is 1 or 0
+1: /t $x23 = 0
+2: $x19 = 3
+(gdb) 
+60	                b.ne    addon                   //if x20 is 1 go to addon (because Z == 0)
+1: /t $x23 = 0
+2: $x19 = 3
+(gdb) 
+addon () at assign3a.s:68
+68	addon:          ror	x19, x19, 1		//this rotates the lsb to be the msb, and now there is a new lsb
+1: /t $x23 = 0
+2: $x19 = 3
+(gdb) 
+70			add     x23, x23, x24	//x23 = x23 + x24
+1: /t $x23 = 0
+2: $x19 = -9223372036854775807
+(gdb) 
+71	                lsl     x24, x24, 1             	//increments exponent by 1
+1: /t $x23 = 1
+2: $x19 = -9223372036854775807
+(gdb) 
+73	                add     x22, x22, 1             	//increments "x22" by 1
+1: /t $x23 = 1
+2: $x19 = -9223372036854775807
+(gdb) 
+74	                b       positive                //goes back to loop
+1: /t $x23 = 1
+2: $x19 = -9223372036854775807
+(gdb) 
+positive () at assign3a.s:56
+56	positive:       cmp     x22, 64                 	//comparing "x22" and 64 (64 bits)
+1: /t $x23 = 1
+2: $x19 = -9223372036854775807
+(gdb) 
+57	                b.eq    done                    //once "x22" reaches 64 it branches to done
+1: /t $x23 = 1
+2: $x19 = -9223372036854775807
+(gdb) 
+59	                tst     x19, 0x1               //this checks if lsb of x19 is 1 or 0
+1: /t $x23 = 1
+2: $x19 = -9223372036854775807
+(gdb) 
+60	                b.ne    addon                   //if x20 is 1 go to addon (because Z == 0)
+1: /t $x23 = 1
+2: $x19 = -9223372036854775807
+(gdb) 
+addon () at assign3a.s:68
+68	addon:          ror	x19, x19, 1		//this rotates the lsb to be the msb, and now there is a new lsb
+1: /t $x23 = 1
+2: $x19 = -9223372036854775807
+(gdb) 
+70			add     x23, x23, x24	//x23 = x23 + x24
+1: /t $x23 = 1
+2: $x19 = -4611686018427387904
+(gdb) 
+71	                lsl     x24, x24, 1             	//increments exponent by 1
+1: /t $x23 = 11
+2: $x19 = -4611686018427387904
+(gdb) 
+73	                add     x22, x22, 1             	//increments "x22" by 1
+1: /t $x23 = 11
+2: $x19 = -4611686018427387904
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 4003] will be killed.
+
+Quit anyway? (y or n) y
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ gdb assign3a[Kexit
+exit
+
+Script done on 2020-05-31 16:37:14-06:00

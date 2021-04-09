@@ -1,0 +1,264 @@
+Script started on 2020-05-31 16:37:20-06:00
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ ./assign3b
+Enter in integer: 10
+Result is: 10
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ ./assign3b
+Enter in integer: -10
+Result is: -10
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ ./assign3b
+Enter in integer: 12345
+Result is: 12345
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ ./assign3b
+Enter in integer: -12345
+Result is: -12345
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ gdb assign3b
+GNU gdb (GDB) Fedora 8.1.1-4.fc28
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from assign3b...done.
+(gdb) b main
+Breakpoint 1 at 0x4005e4: file assign3b.s, line 23.
+(gdb) r
+Starting program: /home/ugb/daniel.jin/355/assignment3/assign3b 
+warning: the debug information found in "/usr/lib/debug//usr/lib64/ld-2.27.so.debug" does not match "/lib/ld-linux-aarch64.so.1" (CRC mismatch).
+
+Missing separate debuginfos, use: dnf debuginfo-install glibc-2.27-38.fc28.aarch64
+warning: the debug information found in "/usr/lib/debug//lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libc-2.27.so.debug" does not match "/lib64/libc.so.6" (CRC mismatch).
+
+
+Breakpoint 1, main () at assign3b.s:23
+23	main:           stp     x29, x30, [sp, -16]!
+(gdb) ni
+24	                mov     x29, sp
+(gdb) 
+26	                mov     x20, 0          	//binary number that will be outputted
+(gdb) 
+27	                mov     x21, 0          		//used to shift "x21" many times to the left
+(gdb) 
+28	                mov     x22, 0         		//used to check if input is negative or not (x22 = 1, pos = 0)
+(gdb) 
+29	                mov     x25, -1	        //used to multiply or divide (x25 changes)
+(gdb) 
+32	                adrp    x0, prompt1
+(gdb) 
+33	                add     x0, x0, :lo12:prompt1
+(gdb) 
+34	                bl      printf          //calling printf function from C
+(gdb) 
+37	                adrp    x0, formatIn
+(gdb) 
+38	                add     x0, x0, :lo12:formatIn
+(gdb) 
+39	                adr     x1, n           //saving n into x1
+(gdb) 
+40	                bl      scanf           //calling scanf function from C
+(gdb) 
+Enter in integer: 3
+43	                adr     x1, n          			//saving n into x1
+(gdb) display/t x20[K[K[K$x20
+1: /t $x20 = 0
+(gdb) display $x19
+2: $x19 = 4196000
+(gdb) 
+(gdb) ni
+44	                ldr     x19, [x1]       		//loading address of x1 to x19
+1: /t $x20 = 0
+2: $x19 = 4196000
+(gdb) 
+46	                cmp     x19, 0         		//comparing x19 with 0
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+47	                b.lt    negative        		//if x19 is less than 0, go to negative branch
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) si
+48	                b       start           		//else go to start
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+start () at assign3b.s:53
+53	start:          cmp     x19, 0          		//comparing x19 and 0
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+54	                b.eq    done            		//if x19 equals 0, go to done
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+56	                mov     x25, 2          		//now let x25 = 2, used for mult or div
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+58	                udiv    x23, x19, x25   	//temporarily let x23 equal x19/2
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+59	                mul     x24, x23, x25   	//x24 = x19 * 2
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+61	                cmp     x24, x19        		//compare x24 and x19
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+62	                b.eq    noRemainder     		//if x24 == decmial_N, go to noRemainder branch
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+63	                mov     x23, 1          		//else x23 = 0
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+64	                b       bottom          		//go to bottom branch
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+bottom () at assign3b.s:68
+68	bottom:         udiv    x19, x19, x25   	//divide x19 by 2 (to decrease the x25)
+1: /t $x20 = 0
+2: $x19 = 3
+(gdb) 
+69	                lsl     x23, x23, x21   	//logically shift left x23 by x25 of x21
+1: /t $x20 = 0
+2: $x19 = 1
+(gdb) 
+70	                orr     x20, x20, x23   //changes 0's to 1's depending if x23 has 0 or 1
+1: /t $x20 = 0
+2: $x19 = 1
+(gdb) 
+72	                add     x21, x21, 1     			//increase x21 by 1
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+73	                b       start           		//go back to start
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+start () at assign3b.s:53
+53	start:          cmp     x19, 0          		//comparing x19 and 0
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+54	                b.eq    done            		//if x19 equals 0, go to done
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+56	                mov     x25, 2          		//now let x25 = 2, used for mult or div
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+58	                udiv    x23, x19, x25   	//temporarily let x23 equal x19/2
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+59	                mul     x24, x23, x25   	//x24 = x19 * 2
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+61	                cmp     x24, x19        		//compare x24 and x19
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+62	                b.eq    noRemainder     		//if x24 == decmial_N, go to noRemainder branch
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+63	                mov     x23, 1          		//else x23 = 0
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+64	                b       bottom          		//go to bottom branch
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+bottom () at assign3b.s:68
+68	bottom:         udiv    x19, x19, x25   	//divide x19 by 2 (to decrease the x25)
+1: /t $x20 = 1
+2: $x19 = 1
+(gdb) 
+69	                lsl     x23, x23, x21   	//logically shift left x23 by x25 of x21
+1: /t $x20 = 1
+2: $x19 = 0
+(gdb) 
+70	                orr     x20, x20, x23   //changes 0's to 1's depending if x23 has 0 or 1
+1: /t $x20 = 1
+2: $x19 = 0
+(gdb) 
+72	                add     x21, x21, 1     			//increase x21 by 1
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+73	                b       start           		//go back to start
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+start () at assign3b.s:53
+53	start:          cmp     x19, 0          		//comparing x19 and 0
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+54	                b.eq    done            		//if x19 equals 0, go to done
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+done () at assign3b.s:75
+75	done:           cmp     x22, 1          		//compare x22 and 1 (to check is negative)
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+76	                b.eq    twosComp        		//if x22 is 1, go to twosComp branch
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+77	                b       print          			//else just go to print branch
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+print () at assign3b.s:82
+82	print:          mov     x1, x20        		//x1 = x20 (for print)
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+83	                adrp    x0, prompt2
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+84	                add     x0, x0, :lo12:prompt2
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+85	                bl      printf          		//calls printf function from C
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+0x00000000004004d0 in printf@plt ()
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) 
+0x00000000004004d4 in printf@plt ()
+1: /t $x20 = 11
+2: $x19 = 0
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 4122] will be killed.
+
+Quit anyway? (y or n) y
+]0;daniel.jin@csa2:~/355/assignment3daniel.jin@csa2:~/355/assignment3$ exit
+exit
+
+Script done on 2020-05-31 16:39:38-06:00

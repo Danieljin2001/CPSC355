@@ -1,0 +1,15 @@
+Script started on 2020-05-22 22:40:07-06:00
+]0;daniel.jin@csa2:~/355/assignment2daniel.jin@csa2:~/355/assignment2$ ./a.out 
+Enter in the amount of random integers you want to sum up: 5
+3 
+7 
+13 
+3 
+6 
+Sum: 32 
+Max: 13 
+Min: 3 
+]0;daniel.jin@csa2:~/355/assignment2daniel.jin@csa2:~/355/assignment2$ exit
+exit
+
+Script done on 2020-05-22 22:40:30-06:00

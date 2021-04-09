@@ -1,0 +1,855 @@
+Script started on 2020-06-20 15:35:55-06:00
+]0;daniel.jin@csa2:~/355/project2daniel.jin@csa2:~/355/project2$ m4 mygame.asm > mygame.s
+]0;daniel.jin@csa2:~/355/project2daniel.jin@csa2:~/355/project2$ gcc mygame.s -o MYGAME
+]0;daniel.jin@csa2:~/355/project2daniel.jin@csa2:~/355/project2$ ./MYGAME 5
+How many scores would you like to see?(Enter 0 for none) 
+0
+Enter in your name: Daniel
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	0.00
+Timer: 60
+Enter in your move (x, y) or '111 111' to quit: 
+0 0
+
+Uncovered a reward of 4.93 points
++XXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	4.93
+Timer: 58
+Enter in your move (x, y) or '111 111' to quit: 
+0 1
+
+Bang!! you lost -3.37 points
++-XXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	1.56
+Timer: 55
+Enter in your move (x, y) or '111 111' to quit: 
+1 0
+
+Good surprise! Double your score
++-XXX
+$XXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	4.00
+Timer: 53
+Enter in your move (x, y) or '111 111' to quit: 
+1 1
+
+Uncovered a reward of 9.88 points
++-XXX
+$+XXX
+XXXXX
+XXXXX
+XXXXX
+Score:	13.88
+Timer: 51
+Enter in your move (x, y) or '111 111' to quit: 
+2 0
+
+Uncovered a reward of 8.91 points
++-XXX
+$+XXX
++XXXX
+XXXXX
+XXXXX
+Score:	22.79
+Timer: 49
+Enter in your move (x, y) or '111 111' to quit: 
+3 0
+
+Uncovered a reward of 10.48 points
++-XXX
+$+XXX
++XXXX
++XXXX
+XXXXX
+Score:	33.28
+Timer: 47
+Enter in your move (x, y) or '111 111' to quit: 
+4 0
+
+Uncovered a reward of 8.05 points
++-XXX
+$+XXX
++XXXX
++XXXX
++XXXX
+Score:	41.33
+Timer: 45
+Enter in your move (x, y) or '111 111' to quit: 
+3 3
+
+Uncovered a reward of 14.48 points
++-XXX
+$+XXX
++XXXX
++XX+X
++XXXX
+Score:	55.81
+Timer: 42
+Enter in your move (x, y) or '111 111' to quit: 
+2 1
+
+Uncovered a reward of 2.37 points
++-XXX
+$+XXX
+++XXX
++XX+X
++XXXX
+Score:	58.17
+Timer: 39
+Enter in your move (x, y) or '111 111' to quit: 
+2 2
+
+Uncovered a reward of 2.43 points
++-XXX
+$+XXX
++++XX
++XX+X
++XXXX
+Score:	60.60
+Timer: 35
+Enter in your move (x, y) or '111 111' to quit: 
+2 3
+
+Uncovered a reward of 12.44 points
++-XXX
+$+XXX
+++++X
++XX+X
++XXXX
+Score:	73.04
+Timer: 33
+Enter in your move (x, y) or '111 111' to quit: 
+2 4
+
+Bang!! you lost -0.49 points
++-XXX
+$+XXX
+++++-
++XX+X
++XXXX
+Score:	72.55
+Timer: 31
+Enter in your move (x, y) or '111 111' to quit: 
+2 1 2
+
+Uncovered a reward of 12.56 points
++-XXX
+$++XX
+++++-
++XX+X
++XXXX
+Score:	85.10
+Timer: 25
+Enter in your move (x, y) or '111 111' to quit: 
+1 3
+
+Bang!! you lost -14.90 points
++-XXX
+$++-X
+++++-
++XX+X
++XXXX
+Score:	70.20
+Timer: 23
+Enter in your move (x, y) or '111 111' to quit: 
+  1 4
+
+Uncovered a reward of 5.86 points
++-XXX
+$++-+
+++++-
++XX+X
++XXXX
+Score:	76.07
+Timer: 20
+Enter in your move (x, y) or '111 111' to quit: 
+0 2
+
+Uncovered a reward of 12.87 points
++-+XX
+$++-+
+++++-
++XX+X
++XXXX
+Score:	88.93
+Timer: 17
+Enter in your move (x, y) or '111 111' to quit: 
+0 3
+
+Uncovered a reward of 0.50 points
++-++X
+$++-+
+++++-
++XX+X
++XXXX
+Score:	89.43
+Timer: 15
+Enter in your move (x, y) or '111 111' to quit: 
+0 4
+
+Time surprise! Add 30 seconds to the clock
++-++@
+$++-+
+++++-
++XX+X
++XXXX
+Score:	89.43
+Timer: 44
+Enter in your move (x, y) or '111 111' to quit: 
+3 1
+
+Bang!! you lost -2.25 points
++-++@
+$++-+
+++++-
++-X+X
++XXXX
+Score:	87.18
+Timer: 41
+Enter in your move (x, y) or '111 111' to quit: 
+3 2
+
+Uncovered a reward of 9.29 points
++-++@
+$++-+
+++++-
++-++X
++XXXX
+Score:	96.47
+Timer: 40
+Enter in your move (x, y) or '111 111' to quit: 
+3 4
+
+Uncovered a reward of 0.22 points
++-++@
+$++-+
+++++-
++-+++
++XXXX
+Score:	96.69
+Timer: 38
+Enter in your move (x, y) or '111 111' to quit: 
+4 1
+
+Uncovered a reward of 3.73 points
++-++@
+$++-+
+++++-
++-+++
+++XXX
+Score:	100.42
+Timer: 35
+Enter in your move (x, y) or '111 111' to quit: 
+  4 2
+
+Bad surprise! Half your score
++-++@
+$++-+
+++++-
++-+++
+++!XX
+Score:	50.00
+Timer: 32
+Enter in your move (x, y) or '111 111' to quit: 
+4 4
+
+Uncovered a reward of 1.36 points
++-++@
+$++-+
+++++-
++-+++
+++!X+
+Score:	51.36
+Timer: 29
+Enter in your move (x, y) or '111 111' to quit: 
+4 3
+
+Uncovered a reward of 1.16 points
++-++@
+$++-+
+++++-
++-+++
+++!++
+Score:	52.52
+Timer: 27
+Game Over!
+
+Score:	52.52
+Timer: 27
+How many scores would you like to see?(Enter 0 for none) 
+1
+Daniel	Score: 52.52	Time: 27
+]0;daniel.jin@csa2:~/355/project2daniel.jin@csa2:~/355/project2$ ./My[KYGAME 5
+How many scores would you like to see?(Enter 0 for none) 
+1
+Daniel	Score: 52.52	Time: 27
+Enter in your name: Jack
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	0.00
+Timer: 60
+Enter in your move (x, y) or '111 111' to quit: 
+0 0
+
+Uncovered a reward of 6.12 points
++XXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	6.12
+Timer: 54
+Enter in your move (x, y) or '111 111' to quit: 
+0 1
+
+Uncovered a reward of 2.20 points
+++XXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	8.32
+Timer: 47
+Enter in your move (x, y) or '111 111' to quit: 
+111 111
+++XXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	8.32
+Timer: 34
+Game Over!
+
+Score:	8.32
+Timer: 34
+How many scores would you like to see?(Enter 0 for none) 
+2
+Daniel	Score: 52.52	Time: 27
+Jack	Score: 8.32	Time: 34
+]0;daniel.jin@csa2:~/355/project2daniel.jin@csa2:~/355/project2$ ./MYGAME 5
+How many scores would you like to see?(Enter 0 for none) 
+2
+Daniel	Score: 52.52	Time: 27
+Jack	Score: 8.32	Time: 34
+Enter in your name: Joe
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	0.00
+Timer: 60
+Enter in your move (x, y) or '111 111' to quit: 
+3 3
+
+Good surprise! Double your score
+XXXXX
+XXXXX
+XXXXX
+XXX$X
+XXXXX
+Score:	0.00
+Timer: 26
+Enter in your move (x, y) or '111 111' to quit: 
+1 1
+
+Uncovered a reward of 8.46 points
+XXXXX
+X+XXX
+XXXXX
+XXX$X
+XXXXX
+Score:	8.46
+Timer: 17
+Enter in your move (x, y) or '111 111' to quit: 
+0 0
+XXXXX
+X+XXX
+XXXXX
+XXX$X
+XXXXX
+Score:	8.46
+Timer: 0
+Game Over!
+
+Score:	8.46
+Timer: 0
+How many scores would you like to see?(Enter 0 for none) 
+3
+Daniel	Score: 52.52	Time: 27
+Jack	Score: 8.32	Time: 34
+Joe	Score: 8.46	Time: 0
+]0;daniel.jin@csa2:~/355/project2daniel.jin@csa2:~/355/project2$ ./MYGAME 5
+How many scores would you like to see?(Enter 0 for none) 
+3
+Daniel	Score: 52.52	Time: 27
+Jack	Score: 8.32	Time: 34
+Joe	Score: 8.46	Time: 0
+Enter in your name: Sean
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	0.00
+Timer: 60
+Enter in your move (x, y) or '111 111' to quit: 
+2 3
+
+Uncovered a reward of 2.96 points
+XXXXX
+XXXXX
+XXX+X
+XXXXX
+XXXXX
+Score:	2.96
+Timer: 52
+Enter in your move (x, y) or '111 111' to quit: 
+3 1
+
+Uncovered a reward of 0.75 points
+XXXXX
+XXXXX
+XXX+X
+X+XXX
+XXXXX
+Score:	3.70
+Timer: 49
+Enter in your move (x, y) or '111 111' to quit: 
+4 4
+
+Uncovered a reward of 3.01 points
+XXXXX
+XXXXX
+XXX+X
+X+XXX
+XXXX+
+Score:	6.72
+Timer: 46
+Enter in your move (x, y) or '111 111' to quit: 
+0 0
+
+Uncovered a reward of 8.69 points
++XXXX
+XXXXX
+XXX+X
+X+XXX
+XXXX+
+Score:	15.41
+Timer: 45
+Enter in your move (x, y) or '111 111' to quit: 
+0 1
+
+Bad surprise! Half your score
++!XXX
+XXXXX
+XXX+X
+X+XXX
+XXXX+
+Score:	7.00
+Timer: 42
+Enter in your move (x, y) or '111 111' to quit: 
+0 2
+
+Uncovered a reward of 14.94 points
++!+XX
+XXXXX
+XXX+X
+X+XXX
+XXXX+
+Score:	21.94
+Timer: 36
+Enter in your move (x, y) or '111 111' to quit: 
+0 4
+
+Uncovered a reward of 5.62 points
++!+X+
+XXXXX
+XXX+X
+X+XXX
+XXXX+
+Score:	27.57
+Timer: 33
+Enter in your move (x, y) or '111 111' to quit: 
+2 0
+
+Bang!! you lost -1.36 points
++!+X+
+XXXXX
+-XX+X
+X+XXX
+XXXX+
+Score:	26.21
+Timer: 30
+Enter in your move (x, y) or '111 111' to quit: 
+3 0
+
+Uncovered a reward of 14.32 points
++!+X+
+XXXXX
+-XX+X
+++XXX
+XXXX+
+Score:	40.52
+Timer: 25
+Enter in your move (x, y) or '111 111' to quit: 
+2 2
+
+Uncovered a reward of 14.74 points
++!+X+
+XXXXX
+-X++X
+++XXX
+XXXX+
+Score:	55.26
+Timer: 23
+Enter in your move (x, y) or '111 111' to quit: 
+1 1
+
+Uncovered a reward of 3.68 points
++!+X+
+X+XXX
+-X++X
+++XXX
+XXXX+
+Score:	58.95
+Timer: 21
+Enter in your move (x, y) or '111 111' to quit: 
+1 4
+
+Uncovered a reward of 9.78 points
++!+X+
+X+XX+
+-X++X
+++XXX
+XXXX+
+Score:	68.73
+Timer: 18
+Enter in your move (x, y) or '111 111' to quit: 
+1 3
+
+Bang!! you lost -0.50 points
++!+X+
+X+X-+
+-X++X
+++XXX
+XXXX+
+Score:	68.23
+Timer: 17
+Enter in your move (x, y) or '111 111' to quit: 
+111 111
++!+X+
+X+X-+
+-X++X
+++XXX
+XXXX+
+Score:	68.23
+Timer: 12
+Game Over!
+
+Score:	68.23
+Timer: 12
+How many scores would you like to see?(Enter 0 for none) 
+0
+]0;daniel.jin@csa2:~/355/project2daniel.jin@csa2:~/355/project2$ ./MYGAME 5
+How many scores would you like to see?(Enter 0 for none) 
+0
+Enter in your name: Frank
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	0.00
+Timer: 60
+Enter in your move (x, y) or '111 111' to quit: 
+0 0
+
+Uncovered a reward of 2.38 points
++XXXX
+XXXXX
+XXXXX
+XXXXX
+XXXXX
+Score:	2.38
+Timer: 57
+Enter in your move (x, y) or '111 111' to quit: 
+1 1
+
+Bad surprise! Half your score
++XXXX
+X!XXX
+XXXXX
+XXXXX
+XXXXX
+Score:	1.00
+Timer: 55
+Enter in your move (x, y) or '111 111' to quit: 
+0 1
+
+Uncovered a reward of 4.24 points
+++XXX
+X!XXX
+XXXXX
+XXXXX
+XXXXX
+Score:	5.24
+Timer: 52
+Enter in your move (x, y) or '111 111' to quit: 
+0 2
+
+Uncovered a reward of 8.47 points
++++XX
+X!XXX
+XXXXX
+XXXXX
+XXXXX
+Score:	13.71
+Timer: 50
+Enter in your move (x, y) or '111 111' to quit: 
+2 2 0
+
+Uncovered a reward of 2.81 points
++++XX
+X!XXX
++XXXX
+XXXXX
+XXXXX
+Score:	16.52
+Timer: 44
+Enter in your move (x, y) or '111 111' to quit: 
+2 1
+
+Uncovered a reward of 0.38 points
++++XX
+X!XXX
+++XXX
+XXXXX
+XXXXX
+Score:	16.90
+Timer: 42
+Enter in your move (x, y) or '111 111' to quit: 
+4 4
+
+Uncovered a reward of 2.71 points
++++XX
+X!XXX
+++XXX
+XXXXX
+XXXX+
+Score:	19.61
+Timer: 37
+Enter in your move (x, y) or '111 111' to quit: 
+3 2
+
+Uncovered a reward of 4.38 points
++++XX
+X!XXX
+++XXX
+XX+XX
+XXXX+
+Score:	24.00
+Timer: 33
+Enter in your move (x, y) or '111 111' to quit: 
+3 1
+
+Uncovered a reward of 7.39 points
++++XX
+X!XXX
+++XXX
+X++XX
+XXXX+
+Score:	31.39
+Timer: 31
+Enter in your move (x, y) or '111 111' to quit: 
+3 3
+
+Uncovered a reward of 3.47 points
++++XX
+X!XXX
+++XXX
+X+++X
+XXXX+
+Score:	34.86
+Timer: 27
+Enter in your move (x, y) or '111 111' to quit: 
+3 4
+
+Uncovered a reward of 5.64 points
++++XX
+X!XXX
+++XXX
+X++++
+XXXX+
+Score:	40.50
+Timer: 25
+Enter in your move (x, y) or '111 111' to quit: 
+3   4 1
+
+Uncovered a reward of 1.60 points
++++XX
+X!XXX
+++XXX
+X++++
+X+XX+
+Score:	42.10
+Timer: 20
+Enter in your move (x, y) or '111 111' to quit: 
+4 0
+
+Time surprise! Add 30 seconds to the clock
++++XX
+X!XXX
+++XXX
+X++++
+@+XX+
+Score:	42.10
+Timer: 48
+Enter in your move (x, y) or '111 111' to quit: 
+4 3
+
+Uncovered a reward of 11.33 points
++++XX
+X!XXX
+++XXX
+X++++
+@+X++
+Score:	53.43
+Timer: 41
+Enter in your move (x, y) or '111 111' to quit: 
+3 4 2
+
+Uncovered a reward of 7.40 points
++++XX
+X!XXX
+++XXX
+X++++
+@++++
+Score:	60.82
+Timer: 38
+Enter in your move (x, y) or '111 111' to quit: 
+1 4
+
+Uncovered a reward of 7.33 points
++++XX
+X!XX+
+++XXX
+X++++
+@++++
+Score:	68.16
+Timer: 35
+Enter in your move (x, y) or '111 111' to quit: 
+0 4
+
+Bang!! you lost -3.28 points
++++X-
+X!XX+
+++XXX
+X++++
+@++++
+Score:	64.87
+Timer: 28
+Enter in your move (x, y) or '111 111' to quit: 
+0 3
+
+Good surprise! Double your score
++++$-
+X!XX+
+++XXX
+X++++
+@++++
+Score:	130.00
+Timer: 23
+Enter in your move (x, y) or '111 111' to quit: 
+2 3
+
+Uncovered a reward of 6.89 points
++++$-
+X!XX+
+++X+X
+X++++
+@++++
+Score:	136.89
+Timer: 15
+Enter in your move (x, y) or '111 111' to quit: 
+2 2
+
+Uncovered a reward of 4.03 points
++++$-
+X!XX+
+++++X
+X++++
+@++++
+Score:	140.92
+Timer: 13
+Enter in your move (x, y) or '111 111' to quit: 
+2 4
+
+Uncovered a reward of 12.93 points
++++$-
+X!XX+
++++++
+X++++
+@++++
+Score:	153.86
+Timer: 11
+Enter in your move (x, y) or '111 111' to quit: 
+1 0
+
+Uncovered a reward of 11.11 points
++++$-
++!XX+
++++++
+X++++
+@++++
+Score:	164.97
+Timer: 5
+Enter in your move (x, y) or '111 111' to quit: 
+1 3
+
+Bang!! you lost -4.21 points
++++$-
++!X-+
++++++
+X++++
+@++++
+Score:	160.76
+Timer: 2
+Enter in your move (x, y) or '111 111' to quit: 
+  1 2
++++$-
++!X-+
++++++
+X++++
+@++++
+Score:	160.76
+Timer: 0
+Game Over!
+
+Score:	160.76
+Timer: 0
+How many scores would you like to see?(Enter 0 for none) 
+0
+]0;daniel.jin@csa2:~/355/project2daniel.jin@csa2:~/355/project2$ exit
+exit
+
+Script done on 2020-06-20 15:44:52-06:00

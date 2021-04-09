@@ -1,0 +1,38 @@
+Script started on 2020-06-06 23:43:45-06:00
+]0;daniel.jin@csa2:~/355/assignment4daniel.jin@csa2:~/355/assignment4$ ./a.out 
+Enter in the size of the NxN array: 10
+6	5	5	6	4	3	7	5	14	0	
+8	6	0	9	10	6	0	4	0	13	
+8	13	0	0	7	10	9	11	5	3	
+7	11	9	13	1	13	0	8	2	14	
+8	10	5	8	3	15	15	4	3	15	
+1	11	12	1	11	3	11	5	14	0	
+8	5	11	1	2	12	14	2	5	0	
+1	13	10	6	6	14	5	5	2	8	
+4	3	4	0	5	15	3	0	4	1	
+1	13	6	12	14	9	9	13	11	14	
+Row 0: has a sum of 55, max of 14 and a min of 0
+Row 1: has a sum of 56, max of 13 and a min of 0
+Row 2: has a sum of 66, max of 13 and a min of 0
+Row 3: has a sum of 78, max of 14 and a min of 0
+Row 4: has a sum of 86, max of 15 and a min of 3
+Row 5: has a sum of 69, max of 14 and a min of 0
+Row 6: has a sum of 60, max of 14 and a min of 0
+Row 7: has a sum of 70, max of 14 and a min of 1
+Row 8: has a sum of 39, max of 15 and a min of 0
+Row 9: has a sum of 102, max of 14 and a min of 1
+
+Column 0: has a sum of 52, max of 8 and a min of 1
+Column 1: has a sum of 90, max of 13 and a min of 3
+Column 2: has a sum of 62, max of 12 and a min of 0
+Column 3: has a sum of 56, max of 13 and a min of 0
+Column 4: has a sum of 63, max of 14 and a min of 1
+Column 5: has a sum of 100, max of 15 and a min of 3
+Column 6: has a sum of 73, max of 15 and a min of 0
+Column 7: has a sum of 57, max of 13 and a min of 0
+Column 8: has a sum of 60, max of 14 and a min of 0
+Column 9: has a sum of 68, max of 15 and a min of 0
+]0;daniel.jin@csa2:~/355/assignment4daniel.jin@csa2:~/355/assignment4$ exit
+exit
+
+Script done on 2020-06-06 23:43:55-06:00

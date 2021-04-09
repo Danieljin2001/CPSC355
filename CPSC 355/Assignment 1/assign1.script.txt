@@ -1,0 +1,58 @@
+Microsoft Windows [Version 10.0.18363.836]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\Daniel Jin>cd Desktop
+
+C:\Users\Daniel Jin\Desktop>cd "CPSC 355"
+
+C:\Users\Daniel Jin\Desktop\CPSC 355>cd "Assignment 1"
+
+C:\Users\Daniel Jin\Desktop\CPSC 355\Assignment 1>a.exe 6
+
+3 2 7 8 1 1
+4 6 0 0 4 4
+1 3 7 1 5 0
+9 5 3 1 4 2
+1 0 0 6 1 5
+7 1 0 1 6 7
+Enter a column number: 0
+
+Table sorted by column 0:
+1 2 7 8 1 1
+1 6 0 0 4 4
+3 3 7 1 5 0
+4 5 3 1 4 2
+7 0 0 6 1 5
+9 1 0 1 6 7
+Enter a column number: 1
+
+Table sorted by column 1:
+1 0 7 8 1 1
+1 1 0 0 4 4
+3 2 7 1 5 0
+4 3 3 1 4 2
+7 5 0 6 1 5
+9 6 0 1 6 7
+Enter a column number: 2
+
+Table sorted by column 2:
+1 0 0 8 1 1
+1 1 0 0 4 4
+3 2 0 1 5 0
+4 3 3 1 4 2
+7 5 7 6 1 5
+9 6 7 1 6 7
+Enter a column number: -1
+Enter a valid column number: 10
+Enter a valid column number: 3
+
+Table sorted by column 3:
+1 0 0 0 1 1
+1 1 0 1 4 4
+3 2 0 1 5 0
+4 3 3 1 4 2
+7 5 7 6 1 5
+9 6 7 8 6 7
+Enter a column number: 111
+
+C:\Users\Daniel Jin\Desktop\CPSC 355\Assignment 1>
